@@ -1,12 +1,14 @@
 package by.my.sn.entities;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "users")
 @Data
+@NoArgsConstructor
 public class User {
 
     @Id
@@ -15,7 +17,7 @@ public class User {
 
     private String login;
 
-    @JoinColumn(name = "id_message")
-    @OneToOne(fetch = FetchType.LAZY)
-    private Message idMessage;
+    public User(String login) {
+        this.login = login;
+    }
 }
