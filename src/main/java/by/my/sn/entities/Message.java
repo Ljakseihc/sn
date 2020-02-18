@@ -1,17 +1,16 @@
-package by.my.sn;
+package by.my.sn.entities;
 
 import lombok.Data;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "public.user")
+@Table(name = "message")
 @Data
-public class User {
+public class Message {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idUser;
-
-    private String login;
+    private Long idMessage;
+    private String text;
 }
