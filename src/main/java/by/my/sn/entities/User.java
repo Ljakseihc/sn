@@ -22,7 +22,8 @@ public class User {
     @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "id_user"))
     private Set<Role> roles;
 
-    public User(String login) {
+    public User(String login, Set<Role> roles) {
         this.login = login;
+        this.roles = roles;
     }
 }
