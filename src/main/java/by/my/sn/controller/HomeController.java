@@ -12,26 +12,26 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.HashSet;
 import java.util.List;
 
-@RestController
-@RequestMapping("users")
+//@RestController
+//@RequestMapping("users")
 public class HomeController {
 
-    private UserDao userDao;
-
-    @Autowired
-    public HomeController(UserDao userDao) {
-        this.userDao = userDao;
-    }
-
-    @GetMapping("/list")
-    public ResponseEntity listUsers(){
-        List<User> users = userDao.findAll();
-        return ResponseEntity.ok(users);
-    }
-
-    @GetMapping("/add")
-    public ResponseEntity addUser(){
-        User user = userDao.save(new User("first", new HashSet<Role>()));
-        return ResponseEntity.ok(user);
-    }
+//    private UserDao userDao;
+//
+//    @Autowired
+//    public HomeController(UserDao userDao) {
+//        this.userDao = userDao;
+//    }
+//
+//    @GetMapping("/list")
+//    public ResponseEntity listUsers(){
+//        List<User> users = userDao.findAll();
+//        return ResponseEntity.ok(users);
+//    }
+//
+//    @GetMapping("/add")
+//    public ResponseEntity addUser(){
+//        User user = userDao.save(new User("first", new HashSet<Role>()));
+//        return ResponseEntity.ok(user);
+//    }
 }
